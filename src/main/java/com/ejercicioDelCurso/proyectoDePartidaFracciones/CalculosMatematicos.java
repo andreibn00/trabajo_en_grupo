@@ -99,5 +99,18 @@ public class CalculosMatematicos {
      	return new Fraccion(a.num*b.den, a.den*b.num);
  	}
 	
+	 static void factor(int numero)
+     {
+          int num = 2;
+
+          while(numero!=1)
+          {
+               while(numero%num==0)
+               {
+                    System.out.println(num);
+                    numero /= num;
+               }
+          }
+     }
 	
 }
