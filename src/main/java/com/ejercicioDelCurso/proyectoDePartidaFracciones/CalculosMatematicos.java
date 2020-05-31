@@ -68,4 +68,63 @@ public class CalculosMatematicos {
 	}
 
 	
+		public static int maximoComunDivisor(int numero1, int numero2) {
+	    int maxComDiv = 1;
+	    for (int i = 1; i <= numero1 && i <= numero2; i++) {
+	        if (numero1 % i == 0 && numero2 % i == 0) {
+	            maxComDiv = i;
+	        }
+	    }
+	    return maxComDiv;
+	}
+	
+	public static int minimoComunMultiplo(int numero1, int numero2) {
+		int minComMul=1;
+		int maxComDiv;
+		maxComDiv=MisMetodos.maximoComunDivisor(numero1, numero2);	   
+		 minComMul= (numero1 * numero2) / maxComDiv;
+		return minComMul;
+		
+	}
+	
+	
+	public static int multiplicar(Fraccion a, Fraccion b){
+     	Fraccion c=new Fraccion();
+     	c.num=a.num*b.num;
+     	c.den=a.den*b.den;
+     	return c;
+  	}
+	
+	public static int dividir(Fraccion a, Fraccion b){
+     	return new Fraccion(a.num*b.den, a.den*b.num);
+ 	}
+	
+	 static void factor(int numero)
+     	{
+          int num = 2;
+
+          while(numero!=1)
+          {
+               while(numero%num==0)
+		       {
+			    System.out.println(num);
+			    numero /= num;
+		       }
+         	 }
+    	 }
+	
+	 static void factorprueba2(int numero)
+     	{
+          int num = 2;
+
+          while(numero!=1)
+          {
+               while(numero%num==0)
+		       {
+			    System.out.println(num);
+			    numero /= num;
+		       }
+         	 }
+    	 }
+	
 }
