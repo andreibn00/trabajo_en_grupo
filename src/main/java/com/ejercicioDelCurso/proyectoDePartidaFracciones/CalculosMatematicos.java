@@ -68,4 +68,23 @@ public class CalculosMatematicos {
 	}
 
 	
+		public static int maximoComunDivisor(int numero1, int numero2) {
+	    int maxComDiv = 1;
+	    for (int i = 1; i <= numero1 && i <= numero2; i++) {
+	        if (numero1 % i == 0 && numero2 % i == 0) {
+	            maxComDiv = i;
+	        }
+	    }
+	    return maxComDiv;
+	}
+	
+	public static int minimoComunMultiplo(int numero1, int numero2) {
+		int minComMul=1;
+		int maxComDiv;
+		maxComDiv=MisMetodos.maximoComunDivisor(numero1, numero2);	   
+		 minComMul= (numero1 * numero2) / maxComDiv;
+		return minComMul;
+		
+	}
+	
 }
