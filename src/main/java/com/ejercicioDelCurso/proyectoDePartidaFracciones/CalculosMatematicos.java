@@ -87,4 +87,17 @@ public class CalculosMatematicos {
 		
 	}
 	
+	
+	public static int multiplicar(Fraccion a, Fraccion b){
+     	Fraccion c=new Fraccion();
+     	c.num=a.num*b.num;
+     	c.den=a.den*b.den;
+     	return c;
+  	}
+	
+	public static int dividir(Fraccion a, Fraccion b){
+     	return new Fraccion(a.num*b.den, a.den*b.num);
+ 	}
+	
+	
 }
